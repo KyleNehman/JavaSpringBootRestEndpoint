@@ -6,7 +6,7 @@ package endpoint;
 
 public class InputObj extends EvalObj {
 
-    private final int 0x66;
+    private final int xorBy = 0x66;
     
     public String xorString() {
 	byte bytesToXor[] = base64Str.decodeBase64();
