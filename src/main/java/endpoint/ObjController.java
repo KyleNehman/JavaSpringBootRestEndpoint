@@ -1,4 +1,4 @@
-package hello;
+package endpoint;
 
 /*
  * A Java translation of the groovy ObjController class
@@ -7,22 +7,25 @@ package hello;
  */
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.*;
 
 @RestController
 @RequestMapping("/")
 public class ObjController {
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<OutputObj> update(@RequestBodt InputObj obj) {
+    public ResponseEntity<OutputObj> update(@RequestBody InputObj obj) {
         
 	// defines a new OutputObj to return
 	OutputObj returnVal = new OutputObj();
 
 	// old data members from input obj
-	String userUUID = obj.getUserUUID;
-	String taskUUID = obj.getTaskUUID;
+	String userUUID = obj.getUserUUID();
+	String taskUUID = obj.getTaskUUID();
 	String postXORStr = obj.xorString();
 
 	// and setting the returnVal obj's members
