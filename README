@@ -1,0 +1,5 @@
+A Java translation of my groovy Spring Boot REST endpoint repo located at: https://github.com/KyleNehman/SpringBootRestEndpoint
+
+This implementation allows the create of a stand alone .jar file, and is to be built with the provided build.gradle.
+
+Once built, the jar can be found at build/libs/JavaRestEndpoint-1.1.0.jar
