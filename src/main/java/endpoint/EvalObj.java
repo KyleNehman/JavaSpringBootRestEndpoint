@@ -9,7 +9,7 @@ public class EvalObj {
 
     private String userUUID;	// userUUID from JSON input
     private String taskUUID;	// taskUUID from JSON input
-    private String base64Str;	// A base 64 string
+    protected String base64Str;	// A base 64 string
 
     public String getTaskUUID() {
 	return this.taskUUID;
